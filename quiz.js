@@ -3,10 +3,11 @@ function checkAnswer() {
      let correctAnswer = "4";
 
     //  get the user answer
-     let userAnswer = document.querySelector('input[name="quiz"]:checked');
+     let userAnswerData = document.querySelector('input[name="quiz"]:checked');
+     let userAnswer = userAnswerData.value;
 
     //  used the .log statement to figure of the return value of userAnswer
-     console.log(userAnswer.value);
+     console.log(userAnswer);
      
 
     //  get the user feedback
@@ -16,7 +17,7 @@ function checkAnswer() {
 
     // if statement that returns feedback to the user
 
-     if(correctAnswer == userAnswer.value) {
+     if(userAnswer == correctAnswer) {
         feedBack.textContent = 'Correct! Well done.';
      } else {
         feedBack.textContent = "That's incorrect. Try again!";
